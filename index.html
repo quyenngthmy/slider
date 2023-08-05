@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" ></script>
+  </head>
+  <body class="w-screen h-screen overflow-x-hidden">
+    <div class="slideshow-container" id="slider-container">
+      <div class="slider-main">
+        <div class="item fade">
+          <div class="numbertext">1</div>
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="item fade">
+          <div class="numbertext">2</div>
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="item fade">
+          <div class="numbertext">3</div>
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="item fade">
+          <div class="numbertext">4</div>
+          <div class="text">Caption Four</div>
+        </div>
+      </div>
+
+      <a class="prev" onclick="slider.btnSlide(-1)">prev</a>
+      <a class="next" onclick="slider.btnSlide(1)">next</a>
+      <div class="dots"></div>
+    </div>
+    <div class="slideshow-container" id="slider-container2">
+      <div class="slider-main">
+        <div class="item fade">
+          <div class="numbertext">1</div>
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="item fade">
+          <div class="numbertext">2</div>
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="item fade">
+          <div class="numbertext">3</div>
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="item fade">
+          <div class="numbertext">4</div>
+          <div class="text">Caption Four</div>
+        </div>
+      </div>
+
+      <a class="prev" onclick="slider2.btnSlide(-1)">prev</a>
+      <a class="next" onclick="slider2.btnSlide(1)">next</a>
+      <div class="dots"></div>
+    </div>
+    <script>
+      var sliderMain = document.getElementById("slider-container");
+      const dots = sliderMain.querySelector(".dots");
+      var slideritem = sliderMain.querySelectorAll(".item");
+      var slider = new Slider(sliderMain, dots, slideritem);
+      slider.start();
+
+      var sliderMain2 = document.getElementById("slider-container2");
+      const dots2 = sliderMain2.querySelector(".dots");
+      var slideritem2 = sliderMain2.querySelectorAll(".item");
+      var slider2 = new Slider(sliderMain2, dots2, slideritem2);
+      slider2.start();
+    </script>
+  </body>
+</html>
